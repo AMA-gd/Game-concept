@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название вашего проекта</title>
+    <style>
+        /* Базовые настройки и темная тема */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background: #0d1117; 
+            color: #c9d1d9; 
+            margin: 0; 
+            padding: 30px; 
+        }
+        
+        /* Контейнер для центрирования контента */
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: #161b22; 
+            padding: 30px; 
+            border-radius: 16px; 
+            border: 1px solid #30363d; 
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3); 
+            text-align: center;
+        }
 
+        /* --- ОТСТУПЫ 30px ПОВСЮДУ --- */
+        h1 { color: #f0f6fc; font-size: 32px; margin-top: 0; margin-bottom: 30px; }
+        h2 { color: #f0f6fc; font-size: 24px; margin-top: 30px; margin-bottom: 30px; }
+        .images-wrapper { margin-bottom: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .description { margin-bottom: 30px; font-size: 16px; color: #8b949e; line-height: 1.6; text-align: left; }
+        .divider { height: 1px; background-color: #30363d; border: none; margin: 30px 0; }
+
+        /* Стили для картинок */
+        .images-wrapper img {
+            display: block;
+            border-radius: 12px;
+            border: 1px solid #30363d;
+            object-fit: cover;
+        }
+        
+        /* Если 2 картинки — они делят ширину пополам */
+        .img-half { width: calc(50% - 10px); max-width: 100%; }
+        
+        /* Если 1 картинка — она на всю ширину */
+        .img-full { width: 100%; max-width: 100%; }
+
+        /* Убираем разделитель у последнего блока */
+        .item-block:last-of-type .divider { display: none; }
+        
+        /* На мобильных устройствах картинки будут друг под другом */
+        @media (max-width: 600px) {
+            .img-half { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- ================= ГЛАВНЫЙ ЗАГОЛОВОК ================= -->
+        <h1>Концепт игр</h1>
+
+        <!-- ================= БЛОК 1 ================= -->
+        <div class="item-block">
+            <h2>Blade Bot</h2>
+            
+            <!-- Картинки: выберите один из вариантов -->
+            <div class="images-wrapper">
+                <!-- Вариант А: Две картинки (раскомментируйте, если нужно) -->
+                <!-- <https://github.com/AMA-gd/Game-concept/releases/download/1.0/1.1.jpg" alt="Описание" class="img-half">
+                <https://github.com/AMA-gd/Game-concept/releases/download/1.0/1.2.jpg" alt="Описание" class="img-half"> -->
+                
+                <!-- Вариант Б: Одна картинка (сейчас активен) -->
+                <img src="ссылка_на_картинку.jpeg" alt="Описание картинки" class="img-full">
+            </div>
+            
+            <p class="description">
+                Здесь размещается описание. Текст выровнен по левому краю для удобства чтения. Вы можете писать здесь всё, что угодно: особенности проекта, сюжет игры или технические характеристики. Отступы со всех сторон составляют 30 пикселей.
+            </p>
+            
+            <hr class="divider">
+        </div>
+
+        <!-- ================= БЛОК 2 (Копия первого) ================= -->
+        <div class="item-block">
+            <h2>Название второго элемента</h2>
+            
+            <div class="images-wrapper">
+                <!-- Пример с двумя картинками -->
+                <img src="ссылка_на_картинку3.jpeg" alt="Описание" class="img-half">
+                <img src="ссылка_на_картинку4.jpeg" alt="Описание" class="img-half">
+            </div>
+            
+            <p class="description">
+                Описание для второго блока. Просто замените текст и ссылки на картинки. Структура автоматически подстроится под ваш контент.
+            </p>
+            
+            <hr class="divider">
+        </div>
+
+        <!-- ================= БЛОК 3 ================= -->
+        <div class="item-block">
+            <h2>Название третьего элемента</h2>
+            
+            <div class="images-wrapper">
+                <img src="ссылка_на_картинку5.jpeg" alt="Описание" class="img-full">
+            </div>
+            
+            <p class="description">
+                Текст третьего блока. Если вам нужно больше блоков, просто скопируйте весь блок <code>&lt;div class="item-block"&gt;...&lt;/div&gt;</code> и вставьте его ниже.
+            </p>
+            
+            <hr class="divider">
+        </div>
+
+    </div>
+</body>
+</html>
