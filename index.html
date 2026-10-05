@@ -50,28 +50,37 @@
         /* Убираем разделитель у последнего блока */
         .item-block:last-of-type .divider { display: none; }
 
-        /* --- СТИЛИ ДЛЯ СПИСКОВ И ПОДЗАГОЛОВКОВ (СПОСОБ 1) --- */
+               /* --- СТИЛИ ДЛЯ СПИСКОВ И ПОДЗАГОЛОВКОВ (СПОСОБ 1) --- */
         .description h3 {
             color: #f0f6fc;       /* Светлый цвет для подзаголовка */
             font-size: 18px;      /* Чуть меньше основного текста */
             margin-top: 0;
             margin-bottom: 15px;  /* Отступ до списка */
+            text-align: left;     /* Жестко прижимаем к левому краю */
         }
         .description ul, .description ol {
             padding-left: 20px;   /* Отступ слева для маркеров/цифр */
             margin-top: 0;
             margin-bottom: 15px;  /* Отступ после списка */
+            text-align: left;     /* Жестко прижимаем к левому краю */
         }
         .description li {
             margin-bottom: 10px;  /* Расстояние между пунктами списка */
+            text-align: left;     /* Жестко прижимаем к левому краю */
         }
         .description li:last-child {
             margin-bottom: 0;     /* Убираем отступ у последнего пункта */
         }
         
-        /* На мобильных устройствах картинки будут друг под другом */
+        /* Адаптация для мобильных телефонов */
         @media (max-width: 600px) {
             .img-half { width: 100%; }
+            
+            /* Немного уменьшаем отступ списка на узких экранах, 
+               чтобы текст занимал больше места по ширине */
+            .description ul, .description ol {
+                padding-left: 15px; 
+            }
         }
     </style>
 </head>
